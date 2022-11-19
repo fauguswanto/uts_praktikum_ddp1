@@ -1,0 +1,64 @@
+package ddp.UtsDdp;
+import java.util.Scanner;
+
+public class UtsPDDPSoal2 {
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        double berat_badan, tinggi_badan, bmi, hasil_bmi;
+        char ulang;
+        
+        do {
+            
+            System.out.println("----------------------------------------------------");
+            System.out.println("Program Klasifikasi Proporsional Berat Badan");
+            System.out.println("----------------------------------------------------");
+            
+            System.out.print("Masukkan berat badan anda dalam Kilogram (kg) :  ");
+            berat_badan = input.nextDouble();
+            
+            System.out.print("Masukkan berat tinggi  anda dalam Centimeter (cm) :  ");
+            tinggi_badan = input.nextDouble();
+            System.out.println();
+            
+            bmi = berat_badan/(tinggi_badan*tinggi_badan/10000);
+            hasil_bmi = Math.round(bmi * 100) / 100.0;
+            System.out.println("Index BMI anda adalah sebesar :  "+hasil_bmi);
+            
+            if (bmi < 16.00) {
+                System.out.println("Anda sangat kurus");
+            
+            } else if ((bmi >= 16.00)&&(bmi <=16.99)) {
+                System.out.println("Anda kurus");
+                
+            } else if ((bmi >= 17.00)&&(bmi <=18.49)) {
+                System.out.println("Anda agak kurus");
+                
+            } else if ((bmi >= 18.50)&&(bmi <=24.99)) {
+                System.out.println("Anda normal");
+                
+            } else if ((bmi >= 25.00)&&(bmi <=29.99)) {
+                System.out.println("Anda Pra-obesitas");
+                
+            } else if ((bmi >= 30.00)&&(bmi <=34.99)) {
+                System.out.println("Anda Obesitas Kelas I");
+                
+            } else if ((bmi >= 35.00)&&(bmi <=39.99)) {
+                System.out.println("Anda Obesitas Kelas II");
+                
+            } else {
+                System.out.println("Anda Obesitas Kelas III");
+            }
+            
+            System.out.println();
+            System.out.print("Apakah anda ingin melakukan pengecekan lagi ? (y/n) ");
+            ulang = input.next().charAt(0);
+            
+            System.out.println();
+            System.out.println();
+            
+        } while (ulang!='n');
+            System.out.println("Program Selesai..");
+        }
+}
