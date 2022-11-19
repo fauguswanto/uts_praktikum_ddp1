@@ -1,0 +1,39 @@
+package ddp.UtsDdp;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class UtsPDDPSoal3 {
+     public static void main(String[] args) {
+        int angka, x, y;
+        char ulang;
+        Scanner scan = new Scanner(System.in);
+        
+         do {
+         
+         System.out.println("---------------------------------------------");
+         System.out.println("Program Pembuat Reverse Floyd's Triangle");
+         System.out.println("---------------------------------------------");
+         System.out.println( );
+        
+        System.out.print ("Masukkan angka yang anda inginkan : ");
+        angka =scan.nextInt();
+        scan.nextLine();
+        
+       for (x = angka; x >= 1; x--) {
+           for (y = x; y >= 1; y--) {
+           System.out.print(+y +" ");
+           }
+           System.out.println( );
+       }
+            
+            System.out.println();
+            System.out.print("Apakah anda ingin memasukkan angka lain ? (y/n) ");
+            ulang = scan.next().charAt(0);
+            
+            System.out.println();
+            System.out.println();
+            
+        } while (ulang!='n');
+            System.out.println("Program Selesai..");
+         }
+     }
