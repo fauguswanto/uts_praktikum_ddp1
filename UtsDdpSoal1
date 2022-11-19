@@ -1,0 +1,45 @@
+package ddp.UtsDdp;
+import java.util.Scanner;
+
+public class UtsDdpSoal1 {
+
+    public static void main(String[] args){
+    Scanner Input = new Scanner(System.in);
+        int bil;
+        char ulang;
+        
+ do {
+   //scanner
+        System.out.println("PROGRAM MENENTUKAN BILANGAN GANJIL & GENAP");
+        System.out.println("-----------------------------------------------------------------");
+        System.out.print("Masukan Bilangan = ");
+        bil=Input.nextInt();
+        
+        //fungsi IF
+        if ((bil%2==0)&&(bil>0)) {
+            System.out.println("Bilangan "+bil+" adalah bilangan genap positif");
+            
+         } else if ((bil%2==0)&&(bil<0)) {
+            System.out.println("Bilangan "+bil+" adalah bilangan genap negatif");
+            
+         } else if ((bil%2!=0)&&(bil>0)) {
+            System.out.println("Bilangan "+bil+" adalah bilangan ganjil positif");
+            
+         } else if (bil==0) {
+            System.out.println("Bilangan anda adalah 0 (nol)");
+            
+          } else  {
+            System.out.println("Bilangan "+bil+" adalah bilangan ganjil negatif");
+         }
+        
+    System.out.println();
+    System.out.print("Apakah anda ingin mengecek angka lain  (y/t)? ");
+    ulang = Input.next().charAt(0);
+       
+    System.out.println();
+      
+ }
+    while (ulang!= 't');
+    System.out.println("Program Selesai...");
+    }
+}
